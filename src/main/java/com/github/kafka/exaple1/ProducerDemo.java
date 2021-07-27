@@ -20,7 +20,7 @@ public class ProducerDemo {
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(kafkaProp);
 
         //create a producer record
-        ProducerRecord<String, String> record = new ProducerRecord<String, String>("first_topic", "hello world");
+        ProducerRecord<String, String> record = new ProducerRecord<String, String>("test_topic", "hello world");
         //send data
 //        System.out.println("Hello Kafka");
         producer.send(record);

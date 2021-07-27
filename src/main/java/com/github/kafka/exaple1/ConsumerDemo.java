@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Properties;
 
@@ -18,9 +17,9 @@ public class ConsumerDemo {
         System.out.println("Hello Consumer");
         final Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getName());
 
-        String bootstrapServers = "localhost:9092";
+        String bootstrapServers = "127.0.0.1:9092";
         String groupId = "my-fourth-application";
-        String topic = "first_topic";
+        String topic = "test-topic";
 
         Properties properties = new Properties();
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
